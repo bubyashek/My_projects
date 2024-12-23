@@ -1,0 +1,68 @@
+
+cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
+
+add_definitions(-std=c++17)
+
+project(battleship)
+
+add_executable(battleship
+    main.cpp
+    utils.h
+    utils.cpp
+    BattleField.h
+    BattleField.cpp
+    BattleFieldCell.h
+    BattleFieldCell.cpp
+    BattleShip.h
+    BattleShip.cpp
+    BattleShipSegment.h
+    BattleShipSegment.cpp
+    BattleShipManager.h
+    BattleShipManager.cpp
+    infoHolders/infoHolder.h
+    infoHolders/AbilityInfoHolder.h
+    infoHolders/AbilityInfoHolder.cpp
+    exceptions/NoAbilitiesAvailable.h
+    exceptions/NoAbilitiesAvailable.cpp
+    exceptions/ShipNearPosition.h
+    exceptions/ShipNearPosition.cpp
+    exceptions/PositionInvalid.h
+    exceptions/PositionInvalid.cpp
+    abilities/AbilityManager.h
+    abilities/AbilityManager.cpp
+    abilities/Ability.h
+    abilities/DoubleDamage.h
+    abilities/DoubleDamage.cpp
+    abilities/Scaner.h
+    abilities/Scaner.cpp
+    abilities/Bombardment.h
+    abilities/Bombardment.cpp
+    abilities/AbilityFactory.h
+    abilities/DoubleDamageFactory.h
+    abilities/DoubleDamageFactory.cpp
+    abilities/ScanerFactory.h
+    abilities/ScanerFactory.cpp
+    abilities/BombardmentFactory.h
+    abilities/BombardmentFactory.cpp
+    players/Player.h
+    players/Bot.h
+    players/Bot.cpp
+    players/User.h
+    players/User.cpp
+    libs/json.hpp
+    game/Game.h
+    game/GameState.h
+    game/GameState.cpp
+    game/PvE.h
+    game/PvE.cpp
+    serialization/FileWrapper.h
+    serialization/FileWrapper.cpp
+    serialization/Deserialization.h
+    serialization/Deserialization.cpp
+    serialization/Serialization.h
+    serialization/Serialization.cpp
+    Orientation.h
+    Orientation.cpp
+    players/Action.h
+    players/Action.cpp
+)

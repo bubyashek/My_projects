@@ -1,0 +1,225 @@
+{
+    "data": {
+        "botField": {
+            "cell_0_0": {
+                "state": 0
+            },
+            "cell_0_1": {
+                "state": 0
+            },
+            "cell_0_2": {
+                "state": 0
+            },
+            "cell_0_3": {
+                "state": 0
+            },
+            "cell_0_4": {
+                "state": 0
+            },
+            "cell_1_0": {
+                "state": 0
+            },
+            "cell_1_1": {
+                "state": 0
+            },
+            "cell_1_2": {
+                "state": 0
+            },
+            "cell_1_3": {
+                "state": 0
+            },
+            "cell_1_4": {
+                "state": 0
+            },
+            "cell_2_0": {
+                "state": 0
+            },
+            "cell_2_1": {
+                "state": 0
+            },
+            "cell_2_2": {
+                "state": 0
+            },
+            "cell_2_3": {
+                "state": 0
+            },
+            "cell_2_4": {
+                "state": 0
+            },
+            "cell_3_0": {
+                "state": 0
+            },
+            "cell_3_1": {
+                "state": 0
+            },
+            "cell_3_2": {
+                "state": 0
+            },
+            "cell_3_3": {
+                "state": 0
+            },
+            "cell_3_4": {
+                "state": 0
+            },
+            "cell_4_0": {
+                "state": 0
+            },
+            "cell_4_1": {
+                "state": 0
+            },
+            "cell_4_2": {
+                "state": 0
+            },
+            "cell_4_3": {
+                "state": 0
+            },
+            "cell_4_4": {
+                "state": 0
+            },
+            "height": 5,
+            "width": 5
+        },
+        "botShipManager": {
+            "ship_0": {
+                "cells": [
+                    {
+                        "state": 2
+                    }
+                ],
+                "direction": 0,
+                "length": 1,
+                "x": 3,
+                "y": 1
+            },
+            "ship_1": {
+                "cells": [
+                    {
+                        "state": 2
+                    },
+                    {
+                        "state": 2
+                    }
+                ],
+                "direction": 1,
+                "length": 2,
+                "x": 0,
+                "y": 3
+            }
+        },
+        "currentDamage": 1,
+        "playerField": {
+            "cell_0_0": {
+                "state": 0
+            },
+            "cell_0_1": {
+                "state": 0
+            },
+            "cell_0_2": {
+                "state": 0
+            },
+            "cell_0_3": {
+                "state": 0
+            },
+            "cell_0_4": {
+                "state": 1
+            },
+            "cell_1_0": {
+                "state": 0
+            },
+            "cell_1_1": {
+                "state": 0
+            },
+            "cell_1_2": {
+                "state": 0
+            },
+            "cell_1_3": {
+                "state": 0
+            },
+            "cell_1_4": {
+                "state": 0
+            },
+            "cell_2_0": {
+                "state": 0
+            },
+            "cell_2_1": {
+                "state": 0
+            },
+            "cell_2_2": {
+                "state": 0
+            },
+            "cell_2_3": {
+                "state": 0
+            },
+            "cell_2_4": {
+                "state": 0
+            },
+            "cell_3_0": {
+                "state": 0
+            },
+            "cell_3_1": {
+                "state": 0
+            },
+            "cell_3_2": {
+                "state": 0
+            },
+            "cell_3_3": {
+                "state": 0
+            },
+            "cell_3_4": {
+                "state": 0
+            },
+            "cell_4_0": {
+                "state": 0
+            },
+            "cell_4_1": {
+                "state": 0
+            },
+            "cell_4_2": {
+                "state": 0
+            },
+            "cell_4_3": {
+                "state": 0
+            },
+            "cell_4_4": {
+                "state": 0
+            },
+            "height": 5,
+            "width": 5
+        },
+        "playerShipManager": {
+            "ship_0": {
+                "cells": [
+                    {
+                        "state": 2
+                    }
+                ],
+                "direction": 3,
+                "length": 1,
+                "x": 0,
+                "y": 0
+            },
+            "ship_1": {
+                "cells": [
+                    {
+                        "state": 2
+                    },
+                    {
+                        "state": 2
+                    }
+                ],
+                "direction": 3,
+                "length": 2,
+                "x": 3,
+                "y": 3
+            }
+        },
+        "playerSkillManager": {
+            "skills": [
+                "Bombardment",
+                "Scaner",
+                "DoubleDamage"
+            ]
+        }
+    },
+    "hash": "5830d7aa2213f770"
+}
