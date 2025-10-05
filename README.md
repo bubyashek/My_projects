@@ -1,0 +1,4 @@
+# Мои проекты
+
+- **Игра "Морской бой"** - в папке Battleship Game (C++)
+- **Игра "Тетрис"** - в папке Tetris (TypeScript, HTML, CSS)
