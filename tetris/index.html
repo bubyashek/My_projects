@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра Tetris - Вход</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="theme.css?v=4.0">
+    <link rel="stylesheet" href="styles.css?v=4.0">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Игра Tetris</h1>
+        <form id="loginForm">
+            <label for="username">Введите имя игрока</label>
+            <input 
+                type="text" 
+                id="username" 
+                name="username"
+                placeholder="Имя пользователя"
+                required
+                autocomplete="off"
+            >
+            <button type="submit">Вход</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            if (username) {
+                localStorage.setItem('tetris.username', username);
+                window.location.href = 'main.html';
+            }
+        });
+
+        // Загрузка сохраненного имени при загрузке страницы
+        window.addEventListener('load', function() {
+            const savedUsername = localStorage.getItem('tetris.username');
+            if (savedUsername) {
+                document.getElementById('username').value = savedUsername;
+            }
+        });
+    </script>
+</body>
+</html>
+

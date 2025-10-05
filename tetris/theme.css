@@ -1,0 +1,110 @@
+/* 
+ * Тема игры Tetris - CSS переменные
+ * Измените значения переменных для смены темы
+ */
+
+:root {
+    /* ===== ОСНОВНЫЕ ЦВЕТА ===== */
+    
+    /* Фон */
+    --bg-primary: #C7F5ED;          /* Основной фон страницы (светлый мятный) */
+    --bg-secondary: #b8e6dc;        /* Вторичный фон (темнее мятного) */
+    --bg-panel: #a8d6cc;            /* Фон панелей */
+    --bg-dark: #8fb8ad;             /* Темный фон для контраста */
+    --bg-canvas: #ffffff;           /* Фон игрового поля */
+    
+    /* Рамки и границы */
+    --border-primary: #6d8c82;      /* Основные рамки */
+    --border-secondary: #547368;    /* Вторичные рамки */
+    --border-accent: #3d5d54;       /* Акцентные рамки */
+    
+    /* Текст */
+    --text-primary: #2d3436;        /* Основной текст */
+    --text-secondary: #2d3436;      /* Вторичный текст */
+    --text-muted: #6c7c7a;          /* Приглушенный текст */
+    --text-inverse: #ffffff;        /* Белый текст (для темных фонов) */
+    
+    /* Тени */
+    --shadow-text: rgba(0, 0, 0, 0.3);
+    --shadow-box: rgba(0, 0, 0, 0.2);
+    --shadow-inset: rgba(0, 0, 0, 0.15);
+    
+    /* ===== АКЦЕНТНЫЕ ЦВЕТА (кнопки) ===== */
+    
+    /* Фиолетовый (DEC6F9) */
+    --accent-purple: #DEC6F9;
+    --accent-purple-hover: #e8d6ff;
+    --accent-purple-shadow: #b89fd9;
+    
+    /* Розовый (F88EA3) */
+    --accent-pink: #F88EA3;
+    --accent-pink-hover: #ff9eb3;
+    --accent-pink-shadow: #d87e93;
+    
+    /* Желтый (FFF4AA) */
+    --accent-yellow: #FFF4AA;
+    --accent-yellow-hover: #fffdcc;
+    --accent-yellow-shadow: #dfd48a;
+    
+    /* Синий (718DC6) */
+    --accent-blue: #718DC6;
+    --accent-blue-hover: #819dd6;
+    --accent-blue-shadow: #5173a6;
+    
+    /* Темно-фиолетовый (6D5A72) */
+    --accent-dark-purple: #6D5A72;
+    --accent-dark-purple-hover: #7d6a82;
+    --accent-dark-purple-shadow: #5d4a62;
+    
+    /* Зеленый (548C2F) */
+    --accent-green: #548C2F;
+    --accent-green-hover: #649c3f;
+    --accent-green-shadow: #446c1f;
+    
+    /* Красный (CC3F0C) */
+    --accent-red: #CC3F0C;
+    --accent-red-hover: #dc4f1c;
+    --accent-red-shadow: #ac2f00;
+    
+    /* ===== ЦВЕТА ТЕТРАМИНО ===== */
+    
+    --tetromino-i: #4F78F4;         /* Линия (синий) */
+    --tetromino-o: #FFF4AA;         /* Квадрат (желтый) */
+    --tetromino-t: #DEC6F9;         /* T-форма (фиолетовый) */
+    --tetromino-s: #548C2F;         /* S-форма (зеленый) */
+    --tetromino-z: #CC3F0C;         /* Z-форма (красный) */
+    --tetromino-j: #854798;         /* J-форма (темно-фиолетовый) */
+    --tetromino-l: #F88EA3;         /* L-форма (розовый) */
+    
+    /* ===== ЛИДЕРБОРД ===== */
+    
+    /* Медали */
+    --medal-gold: #FFD700;
+    --medal-gold-light: #FFE44D;
+    --medal-gold-shadow: #CCA700;
+    
+    --medal-silver: #C0C0C0;
+    --medal-silver-light: #E0E0E0;
+    --medal-silver-shadow: #A0A0A0;
+    
+    --medal-bronze: #CD7F32;
+    --medal-bronze-light: #E09860;
+    --medal-bronze-shadow: #AD5F12;
+    
+    /* ===== ИГРОВЫЕ ЭЛЕМЕНТЫ ===== */
+    
+    --grid-color: #f0f0f0;          /* Светло-серая сетка */
+    --block-outline: #000000;       /* Черная обводка блоков */
+    --block-highlight: rgba(255, 255, 255, 0.3);  /* Блик на блоках */
+    --overlay-dark: rgba(0, 0, 0, 0.7);  /* Темный оверлей для паузы */
+    --text-pause: #FFF8E7;          /* Цвет текста на паузе */
+    
+    /* ===== СОСТОЯНИЯ ===== */
+    
+    --state-success: var(--accent-green);
+    --state-error: var(--accent-red);
+    --state-warning: var(--accent-yellow);
+    --state-info: var(--accent-blue);
+}
+
+

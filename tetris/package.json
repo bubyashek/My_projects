@@ -1,0 +1,17 @@
+{
+  "name": "tetris-game",
+  "version": "1.0.0",
+  "description": "Tetris game implementation in TypeScript",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "serve": "./server.sh start",
+    "stop": "./server.sh stop",
+    "restart": "./server.sh restart",
+    "status": "./server.sh status"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
+
