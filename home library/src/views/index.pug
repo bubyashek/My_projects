@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  .filters
+    .filter-group
+      label Статус:
+      select.pixel-select#status-filter
+        option(value="all") Все книги
+        option(value="available") Доступные
+        option(value="borrowed") На руках
+        option(value="overdue") Просрочены
+    .filter-group
+      button.pixel-btn#apply-filters
+        i.fas.fa-filter
+        |  Применить фильтр
+    .filter-group
+      button.pixel-btn#reset-filters
+        i.fas.fa-sync
+        |  Сбросить
+
+  .books-grid#books-grid
+    .loading Загрузка...
+
+  .pagination
+    button.pixel-btn#prev-page
+      i.fas.fa-chevron-left
+    span#page-info Страница 1 из 1
+    button.pixel-btn#next-page
+      i.fas.fa-chevron-right

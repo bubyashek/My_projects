@@ -1,0 +1,59 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Домашняя библиотека
+    link(rel="stylesheet", href="/styles.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css")
+  body
+    .container
+      header.pixel-header
+        h1 
+          i.fas.fa-book-open
+          |  Домашняя библиотека
+        .header-controls
+          button#add-book-btn.pixel-btn
+            i.fas.fa-plus
+            |  Добавить книгу
+      main
+        block content
+
+    dialog#book-dialog.pixel-dialog
+      form
+        h2 Добавить новую книгу
+        .form-group
+          label(for="title") Название:
+          input.pixel-input#title(type="text" required)
+        .form-group
+          label(for="author") Автор:
+          input.pixel-input#author(type="text" required)
+        .form-group
+          label(for="publishDate") Дата публикации:
+          input.pixel-input#publishDate(type="date" required min="0001-01-01" max="9999-12-31")
+        .dialog-buttons
+          button.pixel-btn(type="button" onclick="this.closest('dialog').close()") Отмена
+          button.pixel-btn(type="submit") Добавить
+
+    dialog#borrow-dialog.pixel-dialog
+      form
+        h2 Взять книгу
+        .form-group
+          label(for="readerName") Читатель:
+          input.pixel-input#readerName(type="text" required)
+        .form-group
+          label(for="returnDate") Дата возврата:
+          input.pixel-input#returnDate(type="date" required min="0001-01-01" max="9999-12-31")
+        .dialog-buttons
+          button.pixel-btn(type="button" onclick="this.closest('dialog').close()") Отмена
+          button.pixel-btn(type="submit") Взять
+
+    dialog#confirm-dialog.pixel-dialog
+      .confirm-content
+        h2#confirm-title Подтверждение
+        p#confirm-message Вы уверены?
+        .dialog-buttons
+          button.pixel-btn#confirm-cancel Отмена
+          button.pixel-btn.pixel-btn-danger#confirm-ok Подтвердить
+
+    script(src="/script.js")

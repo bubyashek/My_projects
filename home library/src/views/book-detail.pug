@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  .book-detail-container
+    .back-button
+      button.pixel-btn(onclick="window.location.href='/'")
+        i.fas.fa-arrow-left
+        |  Назад в библиотеку
+
+    #book-detail.loading Загрузка деталей...
+
+    .book-actions
+      button.pixel-btn#edit-btn
+        i.fas.fa-edit
+        |  Изменить книгу
+      button.pixel-btn#borrow-btn
+        i.fas.fa-hand-holding
+        |  Взять книгу
+      button.pixel-btn#return-btn
+        i.fas.fa-undo
+        |  Вернуть книгу
+      button.pixel-btn.pixel-btn-danger#delete-btn
+        i.fas.fa-trash
+        |  Удалить книгу
+
+  dialog#edit-dialog.pixel-dialog
+    form
+      h2 Изменить книгу
+      .form-group
+        label(for="edit-title") Название:
+        input.pixel-input#edit-title(type="text" required)
+      .form-group
+        label(for="edit-author") Автор:
+        input.pixel-input#edit-author(type="text" required)
+      .form-group
+        label(for="edit-publishDate") Дата публикации:
+        input.pixel-input#edit-publishDate(type="date" required min="0001-01-01" max="9999-12-31")
+      .dialog-buttons
+        button.pixel-btn(type="button" onclick="this.closest('dialog').close()") Отмена
+        button.pixel-btn(type="submit") Сохранить
+
+  script.
+    const bookId = '#{bookId}';
+    document.addEventListener('DOMContentLoaded', () => loadBookDetail(bookId));
