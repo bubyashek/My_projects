@@ -1,0 +1,35 @@
+[
+  {
+    "title": "1112",
+    "author": "12312",
+    "publishDate": "1232-03-12",
+    "isAvailable": true,
+    "id": "cee3b451-81df-4845-9d23-67e949bdff25"
+  },
+  {
+    "title": "12312",
+    "author": "123123",
+    "publishDate": "1232-03-12",
+    "isAvailable": false,
+    "id": "e67a206b-4e6a-4733-bb09-553e6f930fde",
+    "reader": {
+      "name": "Юля",
+      "borrowDate": "2025-10-13",
+      "returnDate": "2026-01-01"
+    }
+  },
+  {
+    "title": "123123",
+    "author": "123234",
+    "publishDate": "2003-04-23",
+    "isAvailable": true,
+    "id": "d02b04e7-f383-4b6b-a338-9f7a86cc0790"
+  },
+  {
+    "title": "Кулинарная книга Совуньи",
+    "author": "Смешарики",
+    "publishDate": "2012-05-05",
+    "isAvailable": true,
+    "id": "e8710e10-364e-4e6b-98e3-d570f4c87577"
+  }
+]
