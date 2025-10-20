@@ -1,0 +1,164 @@
+extends layout
+
+block content
+  .page-header
+    div
+      h1 Управление пользователями
+      p Просмотр, редактирование и управление учетными записями пользователей
+  
+  .filters-section
+    .filters-header
+      h3
+        i.fas.fa-filter.me-2
+        | Фильтры
+      a.clear-filters(href="#" onclick="clearFilters(); return false;") Очистить
+    .filters-grid
+      .filter-group
+        label(for="filterRole") Роль
+        select#filterRole.form-control(onchange="applyFilters()")
+          option(value="") Все роли
+          option(value="admin") Администратор
+          option(value="user") Пользователь
+      .filter-group
+        label(for="filterStatus") Статус
+        select#filterStatus.form-control(onchange="applyFilters()")
+          option(value="") Все статусы
+          option(value="active") Активный
+          option(value="blocked") Заблокирован
+          option(value="unconfirmed") Не подтверждён
+      .filter-group
+        label(for="filterSearch") Поиск
+        input#filterSearch.form-control(type="text" placeholder="Поиск по имени или email..." oninput="applyFilters()")
+  
+  #users-container.users-container
+    .loading
+      .spinner
+      p Загрузка пользователей...
+  
+  //- Floating Add User Button
+  button.btn-floating(type="button" data-bs-toggle="modal" data-bs-target="#addUserModal" title="Добавить пользователя")
+    i.fas.fa-user-plus
+    span Добавить
+  
+  //- Add User Modal
+  #addUserModal.modal.fade(tabindex="-1")
+    .modal-dialog.modal-lg
+      .modal-content
+        .modal-header
+          h5.modal-title
+            i.fas.fa-user-plus.me-2
+            | Добавить пользователя
+          button.btn-close(type="button" data-bs-dismiss="modal")
+        .modal-body
+          form#addUserForm
+            .row
+              .col-md-4
+                .form-group
+                  label(for="addFirstName") Имя
+                  input#addFirstName.form-control(type="text" required)
+              .col-md-4
+                .form-group
+                  label(for="addLastName") Фамилия
+                  input#addLastName.form-control(type="text" required)
+              .col-md-4
+                .form-group
+                  label(for="addMiddleName") Отчество
+                  input#addMiddleName.form-control(type="text")
+            .row
+              .col-md-6
+                .form-group
+                  label(for="addEmail") Email
+                  input#addEmail.form-control(type="email" required)
+              .col-md-6
+                .form-group
+                  label(for="addDateOfBirth") Дата рождения
+                  input#addDateOfBirth.form-control(type="date" required)
+            .row
+              .col-md-6
+                .form-group
+                  label(for="addRole") Роль
+                  select#addRole.form-control
+                    option(value="user") Пользователь
+                    option(value="admin") Администратор
+              .col-md-6
+                .form-group
+                  label(for="addStatus") Статус
+                  select#addStatus.form-control
+                    option(value="active") Активный
+                    option(value="blocked") Заблокирован
+                    option(value="unconfirmed") Не подтверждён
+            .row
+              .col-md-12
+                .form-group
+                  label(for="addPhoto") URL фотографии
+                  input#addPhoto.form-control(type="url" placeholder="https://example.com/photo.jpg" required)
+                  small.form-text.text-muted Введите URL изображения профиля пользователя
+        .modal-footer
+          button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Отмена
+          button.btn.btn-primary(type="submit" form="addUserForm") 
+            i.fas.fa-plus.me-2
+            | Добавить пользователя
+
+  //- Edit User Modal
+  #editUserModal.modal.fade(tabindex="-1")
+    .modal-dialog.modal-lg
+      .modal-content
+        .modal-header
+          h5.modal-title
+            i.fas.fa-user-edit.me-2
+            | Редактировать пользователя
+          button.btn-close(type="button" data-bs-dismiss="modal")
+        .modal-body
+          form#editUserForm
+            input#editUserId(type="hidden")
+            .row
+              .col-md-4
+                .form-group
+                  label(for="editFirstName") Имя
+                  input#editFirstName.form-control(type="text" required)
+              .col-md-4
+                .form-group
+                  label(for="editLastName") Фамилия
+                  input#editLastName.form-control(type="text" required)
+              .col-md-4
+                .form-group
+                  label(for="editMiddleName") Отчество
+                  input#editMiddleName.form-control(type="text")
+            .row
+              .col-md-6
+                .form-group
+                  label(for="editEmail") Email
+                  input#editEmail.form-control(type="email" required)
+              .col-md-6
+                .form-group
+                  label(for="editDateOfBirth") Дата рождения
+                  input#editDateOfBirth.form-control(type="date" required)
+            .row
+              .col-md-6
+                .form-group
+                  label(for="editRole") Роль
+                  select#editRole.form-control
+                    option(value="user") Пользователь
+                    option(value="admin") Администратор
+              .col-md-6
+                .form-group
+                  label(for="editStatus") Статус
+                  select#editStatus.form-control
+                    option(value="active") Активный
+                    option(value="blocked") Заблокирован
+                    option(value="unconfirmed") Не подтверждён
+            .row
+              .col-md-12
+                .form-group
+                  label(for="editPhoto") URL фотографии
+                  input#editPhoto.form-control(type="url" placeholder="https://example.com/photo.jpg" required)
+                  small.form-text.text-muted Введите URL изображения профиля пользователя
+        .modal-footer
+          button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Отмена
+          button.btn.btn-primary(type="submit" form="editUserForm")
+            i.fas.fa-save.me-2
+            | Сохранить изменения
+
+block scripts
+  script(type="module" src="/public/js/users.js?v=4")
+

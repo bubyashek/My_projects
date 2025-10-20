@@ -1,0 +1,68 @@
+[
+  {
+    "id": 6,
+    "firstName": "Кирилл",
+    "lastName": "Вердин",
+    "middleName": "Константинович",
+    "email": "catmeow@gmail.com",
+    "dateOfBirth": "2005-10-21",
+    "role": "admin",
+    "status": "unconfirmed",
+    "photo": "https://i.pinimg.com/736x/15/e3/e9/15e3e9256aee5aba728e265fcb6109b7.jpg"
+  },
+  {
+    "id": 7,
+    "firstName": "Юки",
+    "lastName": "Танака",
+    "middleName": "",
+    "dateOfBirth": "1998-04-12",
+    "email": "yuki.tanaka@example.com",
+    "photo": "https://i.pinimg.com/736x/7c/ae/32/7cae32fb7ebc3e23ed27073a2031d9d4.jpg",
+    "role": "user",
+    "status": "active"
+  },
+  {
+    "id": 8,
+    "firstName": "Годжо",
+    "lastName": "Сатору",
+    "middleName": "",
+    "dateOfBirth": "1989-12-07",
+    "email": "gojo.satoru@jujutsu.com",
+    "photo": "https://i.pinimg.com/736x/4c/2f/bb/4c2fbb3956e4fe6004caa109c82b5f8a.jpg",
+    "role": "user",
+    "status": "active"
+  },
+  {
+    "id": 9,
+    "firstName": "Пинки",
+    "lastName": "Кэт",
+    "middleName": "Мяуковна",
+    "dateOfBirth": "2020-05-20",
+    "email": "pink.cat@meow.com",
+    "photo": "https://i.pinimg.com/736x/de/cb/ea/decbea99881c2827eb18a194cda54a03.jpg",
+    "role": "user",
+    "status": "active"
+  },
+  {
+    "id": 10,
+    "firstName": "Юля",
+    "lastName": "Бубякина",
+    "middleName": "",
+    "email": "bubyashek@loved.com",
+    "dateOfBirth": "2005-07-04",
+    "role": "admin",
+    "status": "active",
+    "photo": "https://i.pinimg.com/736x/9c/43/ef/9c43effea5a1b00443253b0765691a64.jpg"
+  },
+  {
+    "id": 11,
+    "firstName": "Мику",
+    "lastName": "Хатсунэ",
+    "middleName": "",
+    "email": "ui.testing.leti.2025@tutamail.com",
+    "dateOfBirth": "2005-05-15",
+    "role": "user",
+    "status": "active",
+    "photo": "https://i.pinimg.com/1200x/7d/43/0c/7d430c20c91f867d62a843b5072a4799.jpg"
+  }
+]

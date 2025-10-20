@@ -1,0 +1,77 @@
+extends layout
+
+block content
+  .page-header
+    div
+      h1 Новости друзей
+      p#user-name Загрузка информации о пользователе...
+    button.btn.btn-secondary(onclick="goBackToUsers()") ← Назад к списку пользователей
+  
+  .filters-section
+    .filters-header
+      h3
+        i.fas.fa-filter.me-2
+        | Фильтры
+    .filters-grid
+      .filter-group
+        label(for="filterNewsStatus") Статус
+        select#filterNewsStatus.form-control(onchange="filterNews()")
+          option(value="all") Все статусы
+          option(value="active") Активные
+          option(value="blocked") Заблокированные
+  
+  #news-container.news-container
+    .loading
+      .spinner
+      p Загрузка новостей...
+  
+  //- Floating Add News Button
+  button.btn-floating(type="button" data-bs-toggle="modal" data-bs-target="#addNewsModal" title="Добавить новость")
+    i.fas.fa-plus
+    span Добавить новость
+  
+  //- Add News Modal
+  #addNewsModal.modal.fade(tabindex="-1")
+    .modal-dialog.modal-lg
+      .modal-content
+        .modal-header
+          h5.modal-title
+            i.fas.fa-newspaper.me-2
+            | Добавить новость
+          button.btn-close(type="button" data-bs-dismiss="modal")
+        .modal-body
+          form#addNewsForm
+            .row
+              .col-md-12
+                .form-group.mb-3
+                  label(for="addNewsUser") Автор новости
+                  select#addNewsUser.form-control(required)
+                    option(value="" disabled selected) Выберите пользователя...
+              .col-md-12
+                .form-group.mb-3
+                  label(for="addNewsTitle") Заголовок
+                  input#addNewsTitle.form-control(type="text" placeholder="Введите заголовок новости..." required)
+              .col-md-12
+                .form-group.mb-3
+                  label(for="addNewsContent") Содержание
+                  textarea#addNewsContent.form-control(rows="5" placeholder="Введите текст новости..." required)
+              .col-md-12
+                .form-group.mb-3
+                  label(for="addNewsImage") URL изображения
+                  input#addNewsImage.form-control(type="url" placeholder="https://example.com/cat.jpg")
+                  small.form-text.text-muted Необязательно. Добавьте ссылку на изображение для новости
+              .col-md-12
+                .form-group
+                  label(for="addNewsStatus") Статус
+                  select#addNewsStatus.form-control
+                    option(value="active") Активная
+                    option(value="blocked") Заблокированная
+        .modal-footer
+          button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Отмена
+          button.btn.btn-primary(type="submit" form="addNewsForm")
+            i.fas.fa-plus.me-2
+            | Добавить новость
+
+block scripts
+  script(type="module" src="/public/js/news.js?v=4")
+
