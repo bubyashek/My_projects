@@ -1,0 +1,142 @@
+[
+  {
+    "id": 6,
+    "userId": 7,
+    "title": "Сакура в полном цвету! 🌸",
+    "content": "Сегодня была на фестивале цветения сакуры. Невероятная красота! Рекомендую всем посетить.",
+    "status": "active",
+    "createdAt": "2025-10-19T08:15:00.000Z",
+    "image": "https://i.pinimg.com/1200x/d1/eb/ba/d1ebbacb2091a9dde068f530f6871a9e.jpg"
+  },
+  {
+    "id": 7,
+    "userId": 8,
+    "title": "Новая техника: Безграничная Пустота",
+    "content": "Освоил новую технику проклятой энергии. Теперь могу контролировать пространство на молекулярном уровне. Тренировки продолжаются!",
+    "status": "blocked",
+    "createdAt": "2025-10-19T12:30:00.000Z",
+    "image": "https://i.pinimg.com/736x/16/3f/b2/163fb2a484b4ca1eeabe22ed15d21fb3.jpg"
+  },
+  {
+    "id": 8,
+    "userId": 9,
+    "title": "Мяу! 🐱",
+    "content": "Сегодня весь день грелась на солнышке и гонялась за бабочками. Жизнь прекрасна!",
+    "status": "active",
+    "createdAt": "2025-10-19T15:45:00.000Z",
+    "image": "https://i.pinimg.com/1200x/ec/bd/1e/ecbd1e6fdcb6e3a0b523f844e36a4019.jpg"
+  },
+  {
+    "id": 9,
+    "userId": 9,
+    "title": "Единорожек",
+    "content": "Сегодня я каталась на единорожке, было ооочень весело хехе мяу мяу",
+    "status": "active",
+    "createdAt": "2025-10-18T23:44:18.828Z",
+    "image": "https://i.pinimg.com/736x/a4/04/aa/a404aae8737eac29f59a9f05e877b15b.jpg"
+  },
+  {
+    "id": 10,
+    "userId": 11,
+    "title": "Концерт в СПБ!",
+    "content": "Все приходите на мой концерт 21.11.2025 в А2!!!",
+    "status": "blocked",
+    "createdAt": "2025-10-20T00:18:55.853Z"
+  },
+  {
+    "id": 11,
+    "userId": 1,
+    "title": "Test post content",
+    "content": "Test post content",
+    "status": "active",
+    "createdAt": "2025-10-27T08:10:19.661Z"
+  },
+  {
+    "id": 12,
+    "userId": 6,
+    "title": "Test post content",
+    "content": "Test post content",
+    "status": "active",
+    "createdAt": "2025-10-27T08:14:55.376Z"
+  },
+  {
+    "id": 13,
+    "userId": 6,
+    "title": "Test post content",
+    "content": "Test post content",
+    "status": "active",
+    "createdAt": "2025-10-27T13:34:49.152Z"
+  },
+  {
+    "id": 14,
+    "userId": 6,
+    "title": "ffff",
+    "content": "jsvdfjhfbvh",
+    "status": "active",
+    "createdAt": "2025-10-27T14:49:55.677Z"
+  },
+  {
+    "id": 15,
+    "userId": 7,
+    "title": "f",
+    "content": "ffffffff",
+    "status": "active",
+    "createdAt": "2025-10-27T15:05:15.269Z"
+  },
+  {
+    "id": 16,
+    "userId": 7,
+    "title": "456789",
+    "content": "sdfghjkl",
+    "status": "active",
+    "createdAt": "2025-10-27T15:06:51.807Z"
+  },
+  {
+    "id": 17,
+    "userId": 7,
+    "title": "frthgfdv",
+    "content": "wfnkelf",
+    "status": "active",
+    "createdAt": "2025-10-27T15:07:16.269Z"
+  },
+  {
+    "id": 18,
+    "userId": 6,
+    "title": "ssddsv",
+    "content": "45678",
+    "status": "active",
+    "createdAt": "2025-10-27T15:10:42.366Z"
+  },
+  {
+    "id": 19,
+    "userId": 6,
+    "title": "ghjkl;ll",
+    "content": "lxxjilj",
+    "status": "active",
+    "createdAt": "2025-10-27T15:14:14.757Z"
+  },
+  {
+    "id": 20,
+    "userId": 7,
+    "title": "kjhghjkjhb",
+    "content": "jgfghjkjhgvfghj",
+    "status": "active",
+    "createdAt": "2025-10-27T15:15:01.435Z"
+  },
+  {
+    "id": 21,
+    "userId": 6,
+    "title": "ghjklkkhj",
+    "content": "34567890[[",
+    "status": "active",
+    "createdAt": "2025-10-27T15:19:14.606Z"
+  },
+  {
+    "id": 22,
+    "userId": 6,
+    "title": "Test post content",
+    "content": "Test post content",
+    "status": "active",
+    "createdAt": "2025-10-27T15:19:29.787Z"
+  }
+]

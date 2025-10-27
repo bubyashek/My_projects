@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Администрирование социальной сети</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/public/css/main.min.css?v=4">
+  </head>
+  <body>
+    <div class="container-main">
+      <div class="page-header">
+        <div>
+          <h1>Друзья пользователя</h1>
+          <p id="user-name">Загрузка информации о пользователе...</p>
+        </div>
+        <button class="btn btn-secondary" onclick="goBackToUsers()">← Назад к списку пользователей</button>
+      </div>
+      <div class="friends-list" id="friends-container">
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>Загрузка списка друзей...</p>
+        </div>
+      </div>
+      <button class="btn-floating" type="button" data-bs-toggle="modal" data-bs-target="#addFriendModal" title="Добавить друга"><i class="fas fa-user-plus"></i><span>Добавить друга</span></button>
+      <div class="modal fade" id="addFriendModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"><i class="fas fa-user-plus me-2"></i>Добавить друга</h5>
+              <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="searchFriend">Поиск пользователя</label>
+                <input class="form-control" id="searchFriend" type="text" placeholder="Введите имя или email..." oninput="searchUsers()">
+              </div>
+              <div class="available-users-list" id="available-users">
+                <p class="text-muted">Начните вводить для поиска пользователей...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/public/js/friends.js?v=4"></script>
+  </body>
+</html>
