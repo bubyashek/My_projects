@@ -1,0 +1,9 @@
+{
+  "startDate": "01.01.2025",
+  "speedInSeconds": 1,
+  "isRunning": false,
+  "currentDate": "08.01.2025",
+  "currentPrices": {
+    "AAPL": "$195.14"
+  }
+}

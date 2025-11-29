@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', monospace;
+    background: #FFEFD5; /* мягкий кремовый фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    image-rendering: pixelated;
+}
+
+/* --- Контейнер входа --- */
+.login-container {
+    background: #FFF8DC; /* светлый фон карточки */
+    border: 4px solid #FFB6C1; /* мягкий розовый */
+    box-shadow: 0 0 0 2px #FFDAB9, 0 6px 0 #F08080, 0 0 20px rgba(255,182,193,0.4);
+    padding: 40px;
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.login-container h1 {
+    color: #FF69B4;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 #FFC0CB;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* центрируем элементы по горизонтали */
+}
+
+.login-container label {
+    color: #D2691E;
+    font-size: 0.8em;
+    text-align: center; /* текст по центру */
+    margin-top: 10px; /* отступ снизу, чтобы отделить от поля ввода */
+}
+
+.login-container input {
+    padding: 10px;
+    border: 3px solid #FFB6C1;
+    background: #FFF5EE;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.8em;
+    color: #333;
+    box-shadow: inset 2px 2px 0 rgba(0,0,0,0.2);
+}
+
+.login-container input:focus {
+    outline: none;
+    border-color: #FF69B4;
+    background: #FFF0F5;
+}
+
+.login-container button {
+    padding: 12px 15px;
+    background: #FF69B4;
+    color: #FFF8DC;
+    border: 3px solid #FFB6C1;
+    cursor: pointer;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.9em;
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2), 0 4px 0 #FFB6C1;
+}
+
+.login-container button:hover {
+    background: #FF85C1;
+}
+
+.login-container button:active {
+    top: 2px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.2), 0 0 0 #FFB6C1;
+}
+
+/* --- Сюжет и инфо --- */
+.info-block {
+    margin-top: 25px;
+    background: #FFF0F5;
+    padding: 15px;
+    border: 3px solid #FFB6C1;
+    border-radius: 6px;
+}
+
+.info-block h2 {
+    color: #FF69B4;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 0 #FFC0CB;
+}
+
+.info-block p {
+    font-size: 0.7em;
+    color: #333;
+    line-height: 1.5;
+}
+
+.icons-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.65em;
+    color: #333;
+    text-align: center;
+}
+
+.icon-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    border: 2px solid #FFB6C1;
+    border-radius: 6px;
+    background: #FFF5EE;
+    image-rendering: pixelated;
+    box-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+}
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #FFF8DC;
+    padding: 25px 35px;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 320px;
+    max-width: 400px;
+    border: 4px solid #FFB6C1;
+    box-shadow: 0 0 0 2px #FFDAB9, 0 6px 0 #F08080, 0 0 20px rgba(255,182,193,0.4);
+    font-family: 'Press Start 2P', monospace;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #FF69B4;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 0 #FFC0CB;
+}
+
+.modal-content h3 {
+    color: #D2691E;
+    font-size: 0.8em;
+    margin: 15px 0 10px;
+}
+
+.modal-content p {
+    font-size: 0.7em;
+    color: #333;
+    margin: 8px 0;
+}
+
+#leaderboard-container,
+#victory-leaderboard-container {
+    margin: 15px 0;
+    background: #FFF0F5;
+    padding: 10px;
+    border: 2px solid #FFB6C1;
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.leaderboard-list {
+    font-size: 0.65em;
+    text-align: left;
+}
+
+.leaderboard-list div {
+    padding: 5px 0;
+    border-bottom: 1px dashed #FFB6C1;
+}
+
+.leaderboard-list div:last-child {
+    border-bottom: none;
+}
+
+button#btn-exit,
+button#btn-victory-exit {
+    padding: 12px 20px;
+    font-size: 0.7em;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 3px solid #FFB6C1;
+    background: #FF69B4;
+    color: #FFF8DC;
+    transition: background 0.3s;
+    font-family: 'Press Start 2P', monospace;
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2), 0 4px 0 #FFB6C1;
+    margin-top: 10px;
+}
+
+button#btn-exit:hover,
+button#btn-victory-exit:hover {
+    background: #FF85C1;
+}
+/* --- Адаптив --- */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 25px;
+    }
+
+    .icons-row {
+        gap: 10px;
+    }
+
+    .icon-item img {
+        width: 32px;
+        height: 32px;
+    }
+}

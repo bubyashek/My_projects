@@ -1,0 +1,11 @@
+{
+  "name": "lab6-e2e-tests",
+  "version": "1.0.0",
+  "description": "E2E tests for lab6",
+  "scripts": {
+    "test": "node test-broker-playwright.js"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  }
+}

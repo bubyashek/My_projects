@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitten Cards — Вход в игру</title>
+    <link rel="icon" type="image/x-icon" href="levels/favicon.ico">
+    <link rel="stylesheet" href="theme.css?v=4.0">
+    <link rel="stylesheet" href="styles.css?v=4.0">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <h1>Kitten Cards</h1>
+
+        <!-- СЮЖЕТ -->
+        <div class="info-block">
+            <h2>Сюжет</h2>
+            <p>
+                В приюте для котиков произошёл переполох.
+                Шальные котята устроили игру: они разбежались по территории и притворились карточками. Вам предстоит
+                найти всех котят, собирая пары одинаковых карточек.
+                Но всё не так просто:
+                на территории гуляют беспризорные дворовые коты, которые будут вам мешать.
+                Кроме того, локации заполнены ловушками и препятствиями.
+                <b>Собирайте одинаковые карточки, подбирайте бонусы и будьте осторожны!<b>
+            </p>
+        </div>
+
+        <!-- УПРАВЛЕНИЕ -->
+        <div class="info-block">
+            <h2>Управление</h2>
+            <p>
+                <b>W</b> — вверх<br>
+                <b>A</b> — влево<br>
+                <b>S</b> — вниз<br>
+                <b>D</b> — вправо<br>
+                <b>F</b> — перевернуть карточку<br>
+            </p>
+        </div>
+
+        <!-- ОБОЗНАЧЕНИЯ -->
+        <div class="info-block">
+            <h2>Обозначения</h2>
+
+            <div class="icons-row">
+                <div class="icon-item">
+                    <img src="levels/card.png" alt="Бонус 1">
+                    <span>Карточка с котёнком</span>
+                </div>
+                <div class="icon-item">
+                    <img src="levels/magnifying_glass.png" alt="Бонус 1">
+                    <span>Бонус: показать карточки на 2 с.</span>
+                </div>
+                <div class="icon-item">
+                    <img src="levels/speed.png" alt="Бонус 1">
+                    <span>Бонус: ускорение на 3 с.</span>
+                </div>
+
+                <div class="icon-item">
+                    <img src="levels/heal.png" alt="Бонус 2">
+                    <span>Бонус: лечение на 1 ед.</span>
+                </div>
+
+                <div class="icon-item">
+                    <img src="levels/cat_enemy.png" alt="Враг">
+                    <span>Опасный враг</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ФОРМА ВХОДА -->
+        <form id="loginForm">
+            <label for="username">Введите имя игрока</label>
+            <input type="text" id="username" name="username" placeholder="Имя пользователя" required autocomplete="off">
+            <button type="submit">Начать игру</button>
+        </form>
+    </div>
+
+
+    <script>
+
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            if (username) {
+                localStorage.setItem('kitten.username', username);
+                window.location.href = 'main.html';
+            }
+        });
+
+        window.addEventListener('load', function () {
+            const saved = localStorage.getItem('kitten.username');
+            if (saved) {
+                document.getElementById('username').value = saved;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

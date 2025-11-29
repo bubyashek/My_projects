@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kitten Cards 2.0</title>
+    <link rel="icon" type="image/x-icon" href="levels/favicon.ico">
+    <link rel="stylesheet" href="styles.css?v=4.0">
+    <style>
+        body {
+            margin: 0;
+            background: #FFEFD5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        canvas {
+            background: black;
+            image-rendering: pixelated;
+        }
+
+        #hud {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-family: monospace;
+            color: black;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 5px 10px;
+            border: 2px solid #FFA7C4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="hud">
+        <span id="player-name-display"></span><br>
+        Время: <span id="timer">0</span> c |
+        Жизни: <span id="lives">3</span> |
+        Котики: <span id="kittens">0</span>
+    </div>
+
+    <canvas id="gameCanvas" width="384" height="384"></canvas>
+
+    <!-- Модальное окно "Игра окончена" -->
+    <div id="game-over-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Игра окончена!</h2>
+            <p>Игрок: <span id="modal-player-name"></span></p>
+            <p>Время: <span id="player-time">0</span> сек. | Котики: <span id="modal-kittens">0</span> 🐱</p>
+            <h3>Таблица лидеров</h3>
+            <div id="leaderboard-container"></div>
+            <button id="btn-exit">На главную</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно "Победа" -->
+    <div id="victory-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>🎉 Поздравляем! 🎉</h2>
+            <p>Вы прошли все уровни!</p>
+            <p>Игрок: <span id="victory-player-name"></span></p>
+            <p>Время: <span id="victory-time">0</span> сек. | Котики: <span id="victory-kittens">0</span> 🐱</p>
+            <h3>Таблица лидеров</h3>
+            <div id="victory-leaderboard-container"></div>
+            <button id="btn-victory-exit">На главную</button>
+        </div>
+    </div>
+
+    <script>
+        window.canvas = document.getElementById("gameCanvas");
+        window.ctx = canvas.getContext("2d");
+    </script>
+
+    <!-- Подключение игровых модулей -->
+    <script src="managers/mapManager.js"></script>
+    <script src="managers/spriteManager.js"></script>
+    <script src="managers/entityManager.js"></script>
+    <script src="managers/eventManager.js"></script>
+    <script src="managers/physicManager.js"></script>
+    <script src="managers/soundManager.js"></script>
+    <script src="managers/gameManager.js"></script>
+    <script src="leaderboard.js"></script>
+
+    <script>
+        window.onload = function () {
+            // Получаем имя игрока из localStorage
+            const playerName = localStorage.getItem('kitten.username') || "Игрок";
+
+            // Устанавливаем имя игрока ДО загрузки
+            gameManager.playerName = playerName;
+            soundManager.init();
+            soundManager.loadArray([
+                "levels/sounds/attack-swift-punch-bop-audio-1-1-00-00.mp3",
+                "levels/sounds/game-over.wav",
+                "levels/sounds/two_cards.wav",
+                "levels/sounds/game-start.wav",
+                "levels/sounds/main-theme.mp3",
+                "levels/sounds/new-level.wav",
+                "levels/sounds/pickup_bonus.wav",
+            ]);
+            // Показываем имя в HUD
+            document.getElementById("player-name-display").innerText = playerName;
+
+            // Загружаем карту, спрайты и объекты
+            gameManager.loadAll();
+
+            // Запуск таймера и игрового цикла
+            gameManager.startTimer();
+            gameManager.play();
+        };
+    </script>
+
+</body>
+
+</html>
